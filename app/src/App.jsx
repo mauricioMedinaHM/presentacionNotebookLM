@@ -87,7 +87,7 @@ function App() {
       <ParticleField />
 
       <div className="fixed top-6 right-8 z-50 flex items-center gap-3">
-        <span className="text-[#333] text-sm font-mono tracking-wider">
+        <span className="text-[#b0b0c0] text-base font-mono tracking-wider">
           {String(current + 1).padStart(2, '0')} / {slides.length}
         </span>
       </div>
@@ -100,7 +100,7 @@ function App() {
             className={`w-1.5 rounded-full transition-all duration-300 ${
               i === current
                 ? 'h-6 bg-lava'
-                : 'h-1.5 bg-[#222] hover:bg-[#444]'
+                : 'h-1.5 bg-[#2a2a36] hover:bg-[#4a4a5a]'
             }`}
           />
         ))}

@@ -37,7 +37,7 @@ export default function Slide08() {
 
       <div className="relative z-10 flex flex-col items-center text-center max-w-5xl space-y-20">
         <BlurReveal delay={0.2}>
-          <p className="text-2xl md:text-3xl text-depth-subtle leading-relaxed max-w-2xl">
+          <p className="text-3xl md:text-4xl text-depth-subtle leading-relaxed max-w-2xl">
             Si tu profe te da 3 libros con todas las respuestas...
           </p>
         </BlurReveal>
@@ -55,7 +55,7 @@ export default function Slide08() {
           </ScaleIn>
 
           <FadeUp delay={0.7}>
-            <span className="text-3xl text-[#555] font-light">o</span>
+            <span className="text-3xl text-[#ccc] font-light">o</span>
           </FadeUp>
 
           <ScaleIn delay={0.9}>

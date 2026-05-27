@@ -2,6 +2,7 @@ import SlideWrapper from '../ui/SlideWrapper'
 import { FadeUp, SlideIn, ClipReveal } from '../ui/AnimatedText'
 import GlowOrb from '../ui/GlowOrb'
 import PulsingDots from '../ui/PulsingDots'
+import { SparklesText } from '../magicui/sparkles-text'
 import { useEffect, useRef } from 'react'
 import gsap from 'gsap'
 
@@ -41,16 +42,22 @@ export default function Slide00() {
           </FadeUp>
 
           <ClipReveal delay={0.4}>
-            <h1 className="text-5xl md:text-7xl font-extrabold text-depth leading-[1.1] tracking-tight">
+            <h1 className="text-5xl md:text-7xl font-extrabold font-display text-depth leading-[1.08] tracking-tight">
               El{' '}
-              <span className="text-depth-accent">Amplificador</span>
+              <SparklesText
+                colors={{ first: '#FF6A2A', second: '#FFB800' }}
+                sparklesCount={8}
+                className="text-depth-accent"
+              >
+                Amplificador
+              </SparklesText>
               <br />
               Cognitivo
             </h1>
           </ClipReveal>
 
           <FadeUp delay={0.8}>
-            <p className="text-lg md:text-xl text-depth-subtle max-w-lg leading-relaxed mt-4">
+            <p className="text-xl md:text-2xl text-depth-subtle max-w-lg leading-relaxed mt-4">
               Cómo usar IA para estudiar, investigar y documentar mejor.
             </p>
           </FadeUp>
@@ -59,10 +66,10 @@ export default function Slide00() {
             <div className="flex items-center gap-5 pt-4">
               <div
                 ref={lineRef}
-                className="w-14 h-[2px] bg-lava/60 origin-left"
+                className="w-14 h-[2px] bg-lava/80 origin-left"
                 style={{ transform: 'scaleX(0)' }}
               />
-              <span className="text-lava/60 font-medium tracking-[0.2em] text-sm uppercase">
+              <span className="text-lava/80 font-medium tracking-[0.2em] text-lg uppercase">
                 Mauricio Medina
               </span>
             </div>
@@ -81,8 +88,8 @@ export default function Slide00() {
       </div>
 
       <FadeUp delay={1.5} className="absolute bottom-12 left-1/2 -translate-x-1/2">
-        <div className="flex flex-col items-center gap-3 text-[#333] text-xs z-10">
-          <span className="tracking-[0.2em] uppercase text-[10px]">Usa las flechas para navegar</span>
+        <div className="flex flex-col items-center gap-3 text-[#b0b0c0] text-sm z-10">
+          <span className="tracking-[0.2em] uppercase">Usa las flechas para navegar</span>
           <svg
             width="14" height="14" viewBox="0 0 24 24" fill="none"
             stroke="currentColor" strokeWidth="2"

@@ -43,7 +43,7 @@ export default function Slide12() {
 
       <div className="relative z-10 w-full max-w-4xl space-y-12">
         <ClipReveal delay={0.2}>
-          <h2 className="text-5xl md:text-6xl font-black text-depth text-center tracking-tight">
+          <h2 className="text-5xl md:text-7xl font-black font-display text-depth text-center tracking-tight">
             EL <span className="text-depth-accent">FLUJO</span>
           </h2>
         </ClipReveal>
@@ -57,16 +57,16 @@ export default function Slide12() {
               style={{ opacity: 0 }}
             >
               <div className="flex items-center gap-5 flex-shrink-0">
-                <span className="text-lava/40 font-mono font-bold text-lg w-6">{step.num}.</span>
-                <step.Icon className="w-5 h-5 text-lava/30" strokeWidth={1.5} />
+                <span className="text-lava font-mono font-bold text-xl w-6">{step.num}.</span>
+                <step.Icon className="w-6 h-6 text-lava/80" strokeWidth={1.5} />
               </div>
-              <span className="text-gray-300/80 text-lg">{step.text}</span>
+              <span className="text-gray-300/90 text-xl">{step.text}</span>
             </div>
           ))}
         </div>
 
         <BlurReveal delay={1.4}>
-          <p ref={noteRef} className="text-center text-amber-accent/30 text-sm max-w-xl mx-auto tracking-wide mt-4" style={{ opacity: 0.3 }}>
+          <p ref={noteRef} className="text-center text-amber-accent text-lg max-w-xl mx-auto tracking-wide mt-4" style={{ opacity: 0.7 }}>
             Esto no es estudiar con IA. Es aplicar ciencia del aprendizaje, con IA acelerándolo.
           </p>
         </BlurReveal>

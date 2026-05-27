@@ -1,17 +1,18 @@
 @import "tailwindcss";
 
 @theme {
-  --color-base: #080808;
-  --color-surface: #111111;
-  --color-surface-alt: #0A0A0A;
-  --color-primary: #E61C1C;
-  --color-lava: #FF5E00;
-  --color-amber-accent: #FF9D00;
-  --color-dark-900: #080808;
-  --color-dark-800: #0A0A0A;
-  --color-dark-700: #111111;
-  --color-dark-600: #1a1a1a;
-  --font-sans: 'DM Sans', 'Inter', system-ui, -apple-system, sans-serif;
+  --color-base: #07070d;
+  --color-surface: #111118;
+  --color-surface-alt: #0a0a12;
+  --color-primary: #FF3B3B;
+  --color-lava: #FF6A2A;
+  --color-amber-accent: #FFB800;
+  --color-dark-900: #07070d;
+  --color-dark-800: #0a0a12;
+  --color-dark-700: #111118;
+  --color-dark-600: #1a1a24;
+  --font-display: 'Urbanist', system-ui, sans-serif;
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
   --font-mono: 'JetBrains Mono', ui-monospace, monospace;
 }
 
@@ -27,8 +28,8 @@ html {
 
 body {
   font-family: var(--font-sans);
-  background: #080808;
-  color: #a0a0a0;
+  background: #07070d;
+  color: #b8b8c8;
   overflow: hidden;
 }
 
@@ -42,27 +43,29 @@ body {
   display: none;
 }
 
+.font-display {
+  font-family: var(--font-display);
+}
+
 .text-depth {
   color: #ffffff;
   text-shadow:
-    0 1px 2px rgba(0, 0, 0, 0.7),
-    0 4px 8px rgba(0, 0, 0, 0.5),
-    0 8px 24px rgba(8, 8, 8, 0.8);
+    0 1px 2px rgba(0, 0, 0, 0.5),
+    0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
 .text-depth-accent {
-  color: #FF5E00;
+  color: #FF6A2A;
   text-shadow:
-    0 1px 2px rgba(0, 0, 0, 0.6),
-    0 4px 12px rgba(255, 94, 0, 0.35),
-    0 8px 32px rgba(255, 94, 0, 0.15);
+    0 1px 3px rgba(0, 0, 0, 0.4),
+    0 4px 16px rgba(255, 106, 42, 0.3),
+    0 8px 32px rgba(255, 106, 42, 0.12);
 }
 
 .text-depth-subtle {
-  color: #777777;
+  color: #c0c0d0;
   text-shadow:
-    0 1px 3px rgba(0, 0, 0, 0.5),
-    0 4px 12px rgba(8, 8, 8, 0.4);
+    0 1px 3px rgba(0, 0, 0, 0.3);
 }
 
 .grayscale-img {
@@ -76,10 +79,10 @@ body {
 
 .bg-mesh {
   background:
-    radial-gradient(ellipse at 20% 50%, rgba(230, 28, 28, 0.035) 0%, transparent 50%),
-    radial-gradient(ellipse at 80% 20%, rgba(255, 94, 0, 0.025) 0%, transparent 50%),
-    radial-gradient(ellipse at 50% 80%, rgba(255, 157, 0, 0.02) 0%, transparent 50%),
-    #080808;
+    radial-gradient(ellipse at 20% 50%, rgba(255, 59, 59, 0.045) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 20%, rgba(255, 106, 42, 0.035) 0%, transparent 50%),
+    radial-gradient(ellipse at 50% 80%, rgba(255, 184, 0, 0.025) 0%, transparent 50%),
+    #07070d;
 }
 
 .noise-overlay {
@@ -90,7 +93,7 @@ body {
   content: '';
   position: fixed;
   inset: 0;
-  opacity: 0.025;
+  opacity: 0.02;
   pointer-events: none;
   z-index: 9999;
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
@@ -104,4 +107,47 @@ body {
   40% { clip-path: inset(40% 0 20% 0); }
   60% { clip-path: inset(60% 0 10% 0); }
   80% { clip-path: inset(10% 0 80% 0); }
+}
+
+@keyframes meteor {
+  0% {
+    transform: rotate(var(--angle, -215deg)) translateX(0);
+    opacity: 1;
+  }
+  70% { opacity: 1; }
+  100% {
+    transform: rotate(var(--angle, -215deg)) translateX(-500px);
+    opacity: 0;
+  }
+}
+.animate-meteor {
+  animation: meteor linear infinite;
+}
+
+@keyframes ripple {
+  0%, 100% { transform: translate(-50%, -50%) scale(1); }
+  50% { transform: translate(-50%, -50%) scale(0.9); }
+}
+.animate-ripple {
+  animation: ripple 3.5s ease-in-out infinite;
+}
+
+@keyframes orbit {
+  from {
+    transform:
+      rotate(calc(var(--angle) * 1deg))
+      translateY(calc(var(--radius) * -1px))
+      rotate(calc(var(--angle) * -1deg));
+  }
+  to {
+    transform:
+      rotate(calc(var(--angle) * 1deg + 360deg))
+      translateY(calc(var(--radius) * -1px))
+      rotate(calc(var(--angle) * -1deg - 360deg));
+  }
+}
+.animate-orbit {
+  width: var(--icon-size, 30px);
+  height: var(--icon-size, 30px);
+  animation: orbit calc(var(--duration) * 1s) linear infinite;
 }

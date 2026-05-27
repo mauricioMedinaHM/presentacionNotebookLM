@@ -32,13 +32,13 @@ export default function Slide15() {
 
       <div className="relative z-10 flex flex-col items-center text-center max-w-4xl space-y-10">
         <FadeUp delay={0.2}>
-          <p className="text-xl text-[#555]">
+          <p className="text-2xl text-[#ccc]">
             La IA no los va a hacer más inteligentes sola.
           </p>
         </FadeUp>
 
         <ClipReveal delay={0.5}>
-          <h2 className="text-3xl md:text-5xl font-bold text-depth leading-relaxed mt-6">
+          <h2 className="text-4xl md:text-6xl font-bold font-display text-depth leading-relaxed mt-6">
             Ustedes se vuelven más inteligentes
           </h2>
         </ClipReveal>
@@ -52,7 +52,7 @@ export default function Slide15() {
             <p
               key={i}
               ref={el => itemsRef.current[i] = el}
-              className="text-2xl md:text-3xl text-depth-accent font-semibold"
+              className="text-3xl md:text-4xl text-depth-accent font-semibold"
               style={{ opacity: 0 }}
             >
               {text}

@@ -17,9 +17,9 @@ export default function ParticleField() {
     window.addEventListener('resize', resize)
 
     const warmColors = [
-      { r: 230, g: 28, b: 28 },
-      { r: 255, g: 94, b: 0 },
-      { r: 255, g: 157, b: 0 },
+      { r: 255, g: 59, b: 59 },
+      { r: 255, g: 106, b: 42 },
+      { r: 255, g: 184, b: 0 },
     ]
 
     class Particle {
@@ -61,7 +61,7 @@ export default function ParticleField() {
           const dist = Math.sqrt(dx * dx + dy * dy)
           if (dist < 130) {
             ctx.beginPath()
-            ctx.strokeStyle = `rgba(255, 94, 0, ${0.04 * (1 - dist / 130)})`
+            ctx.strokeStyle = `rgba(255, 106, 42, ${0.04 * (1 - dist / 130)})`
             ctx.lineWidth = 0.4
             ctx.moveTo(particles[i].x, particles[i].y)
             ctx.lineTo(particles[j].x, particles[j].y)

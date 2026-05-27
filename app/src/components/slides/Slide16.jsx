@@ -47,12 +47,12 @@ export default function Slide16() {
       <div className="relative z-10 flex flex-col items-center text-center max-w-4xl space-y-10">
         <ScaleIn delay={0.3}>
           <div ref={quoteRef}>
-            <Quote className="w-10 h-10 text-lava/15" strokeWidth={1.2} />
+            <Quote className="w-10 h-10 text-lava/70" strokeWidth={1.2} />
           </div>
         </ScaleIn>
 
         <BlurReveal delay={0.5}>
-          <h2 className="text-3xl md:text-5xl font-bold text-depth leading-relaxed mt-6">
+          <h2 className="text-4xl md:text-6xl font-bold font-display text-depth leading-relaxed mt-6">
             &ldquo;Esta tecnología es un{' '}
             <span className="text-depth-accent">amplificador</span>.&rdquo;
           </h2>
@@ -60,13 +60,13 @@ export default function Slide16() {
 
         <div className="space-y-6 pt-10">
           <FadeUp delay={0.9}>
-            <p ref={goodRef} className="text-xl md:text-2xl text-white/80">
+            <p ref={goodRef} className="text-2xl md:text-3xl text-white/80">
               Al que piensa, lo hace pensar más.
             </p>
           </FadeUp>
 
           <FadeUp delay={1.1}>
-            <p ref={badRef} className="text-base md:text-lg text-white/45">
+            <p ref={badRef} className="text-xl md:text-2xl text-white/80">
               Al que delega todo sin chequear, lo hace cada vez más dependiente.
             </p>
           </FadeUp>

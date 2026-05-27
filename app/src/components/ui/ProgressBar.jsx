@@ -20,7 +20,7 @@ export default function ProgressBar({ current, total }) {
         className="h-full"
         style={{
           width: 0,
-          background: 'linear-gradient(to right, #E61C1C, #FF5E00, #FF9D00)',
+          background: 'linear-gradient(to right, #FF3B3B, #FF6A2A, #FFB800)',
         }}
       />
     </div>

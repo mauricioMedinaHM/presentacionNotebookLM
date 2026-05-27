@@ -4,9 +4,9 @@ import gsap from 'gsap'
 export default function GlowOrb({ color = 'lava', size = 300, x = '50%', y = '50%', delay = 0 }) {
   const ref = useRef(null)
   const colors = {
-    lava: 'rgba(255, 94, 0, 0.1)',
-    red: 'rgba(230, 28, 28, 0.08)',
-    amber: 'rgba(255, 157, 0, 0.08)',
+    lava: 'rgba(255, 106, 42, 0.14)',
+    red: 'rgba(255, 59, 59, 0.11)',
+    amber: 'rgba(255, 184, 0, 0.11)',
   }
 
   useEffect(() => {
@@ -33,7 +33,7 @@ export default function GlowOrb({ color = 'lava', size = 300, x = '50%', y = '50
         top: y,
         background: `radial-gradient(circle, ${colors[color] || colors.lava} 0%, transparent 70%)`,
         transform: 'translate(-50%, -50%)',
-        opacity: 0.4,
+        opacity: 0.5,
       }}
     />
   )
