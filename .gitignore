@@ -6,3 +6,5 @@ dist-ssr
 *.local
 .vscode/
 .idea/
+ppt/.venv/
+ppt/.assets/

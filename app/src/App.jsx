@@ -43,12 +43,13 @@ function App() {
   const prev = useCallback(() => goTo(current - 1), [current, goTo])
 
   useEffect(() => {
+    const nextKeys = ['ArrowRight', 'ArrowDown', 'PageDown', ' ']
+    const prevKeys = ['ArrowLeft', 'ArrowUp', 'PageUp']
     const handleKey = (e) => {
-      if (e.key === 'ArrowRight' || e.key === 'ArrowDown' || e.key === ' ') {
+      if (nextKeys.includes(e.key)) {
         e.preventDefault()
         next()
-      }
-      if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
+      } else if (prevKeys.includes(e.key)) {
         e.preventDefault()
         prev()
       }

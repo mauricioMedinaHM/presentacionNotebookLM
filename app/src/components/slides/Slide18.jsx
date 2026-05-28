@@ -39,7 +39,7 @@ export default function Slide18() {
 
         <ScaleIn delay={1}>
           <img
-            src="/qrIgMauri.png"
+            src="/qrMauri.jpeg"
             alt="QR Instagram @mauri.h.m"
             className="w-64 h-64 rounded-2xl object-cover border border-white/15"
           />

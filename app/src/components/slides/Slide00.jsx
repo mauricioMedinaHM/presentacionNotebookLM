@@ -78,10 +78,11 @@ export default function Slide00() {
 
         <SlideIn direction="right" delay={0.5} className="flex-shrink-0">
           <div ref={photoRef} className="relative">
+            <div className="absolute -inset-6 rounded-[2rem] bg-gradient-to-br from-lava/30 via-amber-accent/20 to-transparent blur-2xl" />
             <img
               src="/fotoMauricio.jpg"
               alt="Mauricio Medina"
-              className="img-fade relative w-72 md:w-80 h-[26rem] md:h-[30rem] object-cover"
+              className="relative w-72 md:w-80 h-[26rem] md:h-[30rem] object-cover rounded-2xl border border-white/10 shadow-2xl"
             />
           </div>
         </SlideIn>

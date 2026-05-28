@@ -60,7 +60,7 @@ export default function Slide09() {
                 style={{ width: '100%', background: 'linear-gradient(to right, #FF3B3B, #FF6A2A, #FFB800)' }}
               />
             </div>
-            <div className="flex justify-between mt-5 text-base text-[#ccc] tracking-wide">
+            <div className="flex justify-between mt-5 text-base text-white font-medium tracking-wide">
               <span>Sin NotebookLM</span>
               <span>Con NotebookLM</span>
             </div>

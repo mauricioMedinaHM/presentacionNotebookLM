@@ -57,8 +57,8 @@ export default function Slide05() {
             <FadeUp key={m.name} delay={0.4 + i * 0.15}>
               <div className="flex items-center gap-8 py-7 px-8 rounded-xl bg-surface/30">
                 <div className="w-48 md:w-56 text-left flex-shrink-0">
-                  <p className="text-white/90 font-semibold text-lg">{m.name}</p>
-                  <p className="text-[#bbb] text-base mt-2">{m.model}</p>
+                  <p className="text-white font-bold text-lg">{m.name}</p>
+                  <p className="text-white/80 font-medium text-base mt-2">{m.model}</p>
                 </div>
                 <div className="flex-1 h-6 bg-surface-alt rounded-full overflow-hidden relative">
                   <div

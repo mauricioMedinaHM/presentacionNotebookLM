@@ -28,7 +28,7 @@ export default function Slide07() {
         <FadeUp delay={0.2}>
           <div className="flex items-center gap-3">
             <Database className="w-5 h-5 text-amber-accent" strokeWidth={1.5} />
-            <span className="text-amber-accent text-base font-medium uppercase tracking-[0.25em]">
+            <span className="text-white/90 text-base font-semibold uppercase tracking-[0.25em]">
               Concepto clave
             </span>
           </div>
